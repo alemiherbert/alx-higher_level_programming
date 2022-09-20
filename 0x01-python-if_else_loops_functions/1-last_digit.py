@@ -3,7 +3,8 @@ import random
 number = random.randint(-10000, 10000)
 
 unsigned = lambda num: num if num >= 0 else num * -1
-l_digit = unsigned(number) % 10
+get_l = lambda num: num % 10 if num >= 0 else (unsigned(num) % 10) * -1
+l_digit = get_l(number)
 prnt = lambda msg: print("Last digit of", number, "is", l_digit, msg, end="")
 
 
