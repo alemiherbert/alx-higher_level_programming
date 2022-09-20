@@ -2,10 +2,19 @@
 import random
 number = random.randint(-10000, 10000)
 
-unsigned = lambda num: num if num >= 0 else num * -1
-get_l = lambda num: num % 10 if num >= 0 else (unsigned(num) % 10) * -1
+def unsigned(num): 
+    return num if num >= 0 else num * -1
+
+
+def get_l(num):
+    return num % 10 if num >= 0 else (unsigned(num) % 10) * -1
+
+
 l_digit = get_l(number)
-prnt = lambda msg: print("Last digit of", number, "is", l_digit, msg, end="")
+
+
+def prnt(msg):
+    print("Last digit of", number, "is", l_digit, msg, end="")
 
 
 if l_digit > 5:
