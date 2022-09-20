@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import random
-number = random.randint(-10000, 20000)
+number = random.randint(-10000, 10000)
 
 unsigned = lambda num: num if num >= 0 else num * -1
 l_digit = unsigned(number) % 10
