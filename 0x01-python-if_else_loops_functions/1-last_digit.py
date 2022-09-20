@@ -3,7 +3,7 @@ import random
 number = random.randint(-10000, 20000)
 l_digit = number % 10
 
-prnt = lambda msg: print("Last digit of", number, "is", l_digit, msg)
+prnt = lambda msg: print("Last digit of", number, "is", l_digit, msg, end="")
 if l_digit > 5:
     prnt("and is greater than 5")
 elif l_digit == 0:
