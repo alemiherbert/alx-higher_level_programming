@@ -1,9 +1,0 @@
-#!/bin/bash
-
-START_TIME=20220920
-
-for f in *
-do
-	let "TIME_STAMP=$START_TIME+$RANDOM%900"
-	touch -t $TIME_STAMP $f
-done
