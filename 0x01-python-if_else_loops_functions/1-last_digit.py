@@ -2,27 +2,16 @@
 import random
 number = random.randint(-10000, 10000)
 
-def unsigned(num): 
-    return num if num >= 0 else num * -1
+if number >= 0:
+    last_digit = number % 10
+elif number < 0:
+    last_digit = ((number * -1) % 10) * -1
 
+if last_digit > 5:
+    str = 'Last digit of {0} is {1} and is greater than 5'
+elif last_digit < 6 and last_digit != 0:
+    str = 'Last digit of {0} is {1} and is less than 6 and not 0'
+elif last_digit == 0:
+    str = 'Last digit of {0} is {1} and is 0'
 
-def get_l(num):
-    return num % 10 if num >= 0 else (unsigned(num) % 10) * -1
-
-
-l_digit = get_l(number)
-
-
-def prnt(msg):
-    print("Last digit of", number, "is", l_digit, msg, end="")
-
-
-if l_digit > 5:
-    prnt("and is greater than 5")
-elif l_digit == 0:
-    prnt("and is 0")
-elif l_digit < 6 and l_digit != 0:
-    prnt("and is less than 6 and not 0")
-else:
-    print("How did we get here?")
-print()
+print(str.format(number, last_digit))
