@@ -8,8 +8,9 @@ def print_matrix_integer(matrix=[[]]):
 
             for num in row:
                 # If the last one
-                if i == last:
+                if counter == last:
                     print('{:d}'.format(num), end="")
                 else:
                     print('{:d}'.format(num), end=" ")
+                counter += 1
             print()
