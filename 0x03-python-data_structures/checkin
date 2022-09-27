@@ -1,0 +1,5 @@
+#!/bin/bash
+myfile=$1
+git add $myfile
+git commit -m "Task ${myfile:0:1} completed"
+git push
