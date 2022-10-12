@@ -1,6 +1,0 @@
-#!/bin/bash
-
-for file in *
-do
-touch -d "2022-09-20 $(shuf -i0-23 -n1):$(shuf -i0-59 -n1):$(shuf -i0-59 -n1)" "$file"
-done
