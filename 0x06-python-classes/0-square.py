@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-class Square():
+class Square:
     """
     This class doesn't do a thing for now
     """
