@@ -5,10 +5,10 @@ def safe_print_list_integers(my_list=[], x=0):
     p = 0
     for item in my_list:
         try:
-            if p < x:
-                print("{:d}".format(item), end='')
+            if type(my_list(item) is int and p != x):
+                print("{:d}".format(my_list(item)), end='')
                 p += 1
-        except (ValueError, TypeError):
+        except TypeError:
             continue
-        finally:
-            print()
+    print()
+    return p
