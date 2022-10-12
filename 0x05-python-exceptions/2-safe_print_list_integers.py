@@ -6,8 +6,9 @@ def safe_print_list_integers(my_list=[], x=0):
     for item in my_list:
         try:
             if p < x:
-                print("{:d}".format(item))
+                print("{:d}".format(item), end='')
+                p += 1
         except (ValueError, TypeError):
-            pass
+            continue
         finally:
             print()
