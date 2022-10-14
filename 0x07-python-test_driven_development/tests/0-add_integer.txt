@@ -1,0 +1,21 @@
+# import the add_integer function from the 0-add_integer module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+# add_integer adds two integers together.
+# if non integers are passed, a TypeError is raised with the message
+# 'a must be an integer' or 'b must be an integer'
+
+# test case 0: no arguments passed
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+# test case 1: one argument passed
+>>> add_integer(92)
+190
+
+# test case 2: argument a not supplied
+>>> add_integer(92,)
+190
