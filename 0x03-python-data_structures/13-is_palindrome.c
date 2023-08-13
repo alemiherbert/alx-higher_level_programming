@@ -22,7 +22,10 @@ int is_palindrome(listint_t **head)
     flag = 0;
     node = *head;
 
-    if (!head || !(*head)->next)
+    if (!head)
+        return 0;
+
+    if (!(*head))
         return 1;
 
     while (!flag)
@@ -41,8 +44,7 @@ int is_palindrome(listint_t **head)
             j--;
         }
         else
-            flag = 0;
+            flag = 1;
     }
-
     return (flag);
 }
