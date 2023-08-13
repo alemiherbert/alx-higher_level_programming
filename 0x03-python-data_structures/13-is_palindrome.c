@@ -1,8 +1,8 @@
 #include "lists.h"
 #include <stdio.h>
-unsigned int get_length(listint_t **head)
+int get_length(listint_t **head)
 {
-    unsigned int length;
+    int length;
     listint_t *node = *head;
 
     for (length = 1; node->next; length++)
@@ -22,7 +22,7 @@ int is_palindrome(listint_t **head)
     flag = 0;
     node = *head;
 
-    if (!head || !head->next)
+    if (!head || !(*head)->next)
         return 1;
 
     while (!flag)
