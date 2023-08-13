@@ -18,16 +18,16 @@ int is_palindrome(listint_t **head)
     listint_t *node, *_node;
 
     i = 0;
-    j = get_length(head);
+    j = get_length(head) - 1;
     node = *head;
 
     if (!head || !*head)
-        return 0;
+        return 1;
 
-    while (node && i <= j)
+    while (node && i < j)
     {
         _node = node;
-        for (; _node->next && i < j - 1; i++)
+        for (; _node && i < j; i++)
             _node = _node->next;
 
         first = node->n;
@@ -43,3 +43,4 @@ int is_palindrome(listint_t **head)
 
     return 1;
 }
+
