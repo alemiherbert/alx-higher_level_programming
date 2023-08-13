@@ -14,38 +14,32 @@ int get_length(listint_t **head)
 
 int is_palindrome(listint_t **head)
 {
-    int i, j, pos, first, last, flag;
+    int i, j, first, last;
     listint_t *node, *_node;
 
-    i = pos = 0;
+    i = 0;
     j = get_length(head);
-    flag = 0;
     node = *head;
 
-    if (!head)
+    if (!head || !*head)
         return 0;
 
-    if (!(*head))
-        return 1;
-
-    while (flag == 0)
+    while (node && i <= j)
     {
         _node = node;
-        for (first = _node->n; _node->next && pos < j; pos++)
+        for (; _node->next && i < j - 1; i++)
             _node = _node->next;
+
+        first = node->n;
         last = _node->n;
-        
-        if (first == last)
-        {
-            if (pos >= get_length(head) / 2)
-                flag = 1;
-            node = node->next;
-            printf("%s, %s\n", first, last);
-            i++;
-            j--;
-        }
-        else
-            flag = 1;
+
+        if (first != last)
+            return 0;
+
+        node = node->next;
+        i++;
+        j--;
     }
-    return (flag);
+
+    return 1;
 }
