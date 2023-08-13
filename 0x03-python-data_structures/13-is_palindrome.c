@@ -28,7 +28,7 @@ int is_palindrome(listint_t **head)
     if (!(*head))
         return 1;
 
-    while (!flag)
+    while (flag == 0)
     {
         _node = node;
         for (first = _node->n; _node->next && pos < j; pos++)
@@ -40,6 +40,7 @@ int is_palindrome(listint_t **head)
             if (pos >= get_length(head) / 2)
                 flag = 1;
             node = node->next;
+            printf("%s, %s\n", first, last);
             i++;
             j--;
         }
