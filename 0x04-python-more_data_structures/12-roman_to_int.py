@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 def roman_to_int(roman_string):
-    
-    if roman_string == None:
+    if roman_string is None:
         return 0
     if not isinstance(roman_string, str):
         return 0
@@ -21,4 +20,3 @@ def roman_to_int(roman_string):
     for i in range(len(roman_string)):
         result += numeral_map[roman_string[i]]
     return result
-
