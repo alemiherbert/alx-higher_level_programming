@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+A simple square lives here
+"""
+
 
 class Square:
     """
@@ -16,7 +20,7 @@ class Square:
             TypeError: If size is not an integer
             ValueError: If size is less than 0
         """
-        if type(size) != "int":
+        if not type(size) is int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
