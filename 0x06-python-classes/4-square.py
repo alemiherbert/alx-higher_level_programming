@@ -47,5 +47,10 @@ class Square:
     def size(self, value):
         """
         Set the size of the square
+
+        Raises:
+            ValueError: if value is less than 0
         """
+        if value < 0:
+            raise ValueError("size must be an integer")
         self.__size = value
