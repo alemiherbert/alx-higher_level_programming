@@ -2,6 +2,7 @@
 
 """ empty square lives here """
 
+
 class Square:
     """
     A simple square
