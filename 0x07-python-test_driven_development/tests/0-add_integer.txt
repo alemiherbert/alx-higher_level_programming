@@ -117,12 +117,12 @@ The function will also fail if NaN is provided
 
 ::
 
-    >>> add_integer(float('inf'))
+    >>> add_integer(float('nan'))
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
 
 ::
 
-    >>> add_integer(11, float('inf'))
+    >>> add_integer(11, float('nan'))
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
