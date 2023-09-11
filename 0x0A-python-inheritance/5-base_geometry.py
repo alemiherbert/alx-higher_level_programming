@@ -2,5 +2,6 @@
 
 """Lets do some numbers!!!"""
 
-def BaseGeometry:
+class BaseGeometry:
+    """ Class that does alot of nothing"""
     pass
