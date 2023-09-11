@@ -1,0 +1,30 @@
+# Tests for 1-my_list.py
+
+## Passing Tests
+1. Imports
+>>> MyList = __import__('1-my_list').MyList
+>>>
+
+2. List Usage
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(100)
+>>> my_list.append(10)
+>>> print(my_list)
+[1, 100, 10]
+>>> my_list.print_sorted()
+[1, 10, 100]
+>>> print(my_list)
+[1, 100, 10]
+>>>
+
+3. Empty List
+>>> tmp = []
+>>> my_list = MyList(tmp)
+>>> my_list.print_sorted()
+[]
+>>>
+
+## Failing Tests
+1. Undefined List
+>>>
