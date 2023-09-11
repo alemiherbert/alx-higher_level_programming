@@ -2,7 +2,7 @@
 
 """Module contains a class that inherits from the builtin list object"""
 
-def MyList(list):
+class MyList(list):
     """Implements sorted printing for the builtin list object"""
 
     def print_sorted(self):
