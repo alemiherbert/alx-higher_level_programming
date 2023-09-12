@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Summary: This module contains a function that demonstrates appending textto files in python
+Summary: This module contains a function that demonstrates appending
+text to files in python
 Author: Alemi Herbert Asiki <alemiherbert@gmail.com>
 Created: September 2023
 (c) Alemi Herbert 2023
