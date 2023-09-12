@@ -53,25 +53,31 @@ Traceback (most recent call last):
     ...
 TypeError: area() takes 1 positional argument but 2 were given
 
-10. Passing a tuple to integer_validator
+10. Passing excess arguments to area method
+>>> bg.area(5, 5)
+Traceback (most recent call last):
+    ...
+TypeError: area() takes 1 positional argument but 3 were given
+
+11. Passing a tuple to integer_validator
 >>> bg.integer_validator('name', (3, '23'))
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
-10. Passing a list to integer_validator
+12. Passing a list to integer_validator
 >>> bg.integer_validator('name', [3, '23'])
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
-11. Passing a dict to integer_validator
+13. Passing a dict to integer_validator
 >>> bg.integer_validator('name', {"age": '23'})
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
-12. Passing a tuple to integer_validator
+14. Passing a tuple to integer_validator
 >>> bg.integer_validator('name', None)
 Traceback (most recent call last):
     ...
