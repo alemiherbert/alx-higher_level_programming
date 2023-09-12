@@ -22,4 +22,4 @@ if __name__ == "__main__":
     except FileNotFoundError:
         my_list = []
     my_list.extend[1:]
-    save_to_json_file(items, "add_items.json")
+    save_to_json_file(my_list, "add_items.json")
