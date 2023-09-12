@@ -9,7 +9,7 @@ Created: September 2023
 """
 
 
-def write_name(filename="", text=""):
+def write_file(filename="", text=""):
     """
     This function writes a piece of text to a file
     It does not manage file permission exceptions
