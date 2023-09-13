@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 
+"""
+Pascals triangle
+"""
 
 def pascal_triangle(n):
+    """ Pascals triangle """
     outer_list = []
     if n <= 0:
         return outer_list
