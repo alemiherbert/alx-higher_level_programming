@@ -4,6 +4,7 @@
 Pascals triangle
 """
 
+
 def pascal_triangle(n):
     """ Pascals triangle """
     outer_list = []
