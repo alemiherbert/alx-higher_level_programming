@@ -1,0 +1,90 @@
+--- tests for 0-add_integer.py
+
+--- 01. Import module
+>>> add_integer = __import__('0-add_integer').add_integer
+
+--- 02. Add 2 integers
+>>> add_integer(1, 2)
+3
+
+--- 03. Add 1 floats and 1 int
+>>> add_integer(1.2, 2)
+3
+
+>>> add_integer(1, 2.2)
+3
+
+--- 04. Provide only one parameter
+>>> add_integer(2)
+100
+
+--- 05. Provide a negative value
+>>> add_integer(10, -2)
+8
+
+--- 06. Provide None as a parameter
+>>> add_integer(10, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(None, 10)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+--- 07. Provide a string as a parameter
+>>> add_integer(10, "Hello")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("Hello", 10)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+--- 08. Provide a list as a parameter
+>>> add_integer(10, [1, 2])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer([1, 2], 10)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+--- 09. Provide a tuple as a parameter
+>>> add_integer(10, (1, 2))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer((1, 2), 10)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+--- 10. Provide a set as a parameter
+>>> add_integer(10, {1, 2})
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer({1, 2}, 10)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+--- 11. Provide a dictionary as a parameter
+>>> add_integer(10, {"food": 1})
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer({"Health": 2}, 10)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
