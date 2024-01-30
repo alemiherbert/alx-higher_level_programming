@@ -10,7 +10,7 @@ def search_user(letter):
     url = "http://0.0.0.0:5000/search_user"
     params = {'q': letter}
 
-    response = requests.post(url, params=params)
+    response = requests.post(url, data=params)
     try:
         json_data = response.json()
 
@@ -23,7 +23,7 @@ def search_user(letter):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
+    if len(sys.argv) >= 2:
         letter = sys.argv[1]
     else:
         letter = ""
