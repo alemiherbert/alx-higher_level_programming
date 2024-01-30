@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Take in a URL,
-- send a request to the URL and 
+- send a request to the URL and
 - display the body of the response (decoded in utf-8).
 """
 
