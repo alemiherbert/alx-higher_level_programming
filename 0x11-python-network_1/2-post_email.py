@@ -18,7 +18,7 @@ import urllib.parse
 
 def send_post_request(url, email):
     """Encode the email parameter"""
-    data = urllib.parse.urlencode({"email": email}).encode("utf-8")
+    data = urllib.parse.urlencode({"email": email}).encode("ascii")
 
     with urllib.request.urlopen(url, data=data) as response:
         content = response.read().decode("utf-8")
